@@ -1,11 +1,12 @@
 import React from "react"
-import Home from "./home/home"
+import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout/layout"
 
 const IndexPage = () => (
   <Layout>
-    <Home />
+    <header>I'm Home</header>
   </Layout>
 )
+
 
 export default IndexPage

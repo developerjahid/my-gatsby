@@ -1,10 +1,11 @@
-import React from "react"
+import React, { Fragment} from "react"
+import Nav1 from "./nav/nav1"
 
 const Navbar = () => {
   return (
-    <>
-      Hello I'm Navbar
-    </>
+    <Fragment>
+      <Nav1 />
+    </Fragment>
   )
 }
 

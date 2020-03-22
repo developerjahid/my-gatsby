@@ -1,13 +1,15 @@
-import React from "react"
+import React, { Fragment} from "react"
 import PropTypes from "prop-types"
 import Navbar from "./navbar/navbar"
+import Footer from "./footer/footer"
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <Fragment>
       <Navbar />
-        <main>{children}</main>
-    </>
+        {children}
+      <Footer />
+    </Fragment>
   )
 }
 
