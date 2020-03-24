@@ -1,3 +1,10 @@
+//dot env to hide keys
+require("dotenv").config({
+  path: `.env`,
+})
+
+
+//module
 module.exports = {
   siteMetadata: {
     title: `Developer Jahid`,
