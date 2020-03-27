@@ -21,7 +21,7 @@ const Nav1 = (props) => {
 
     return (
         <Fragment>
-            <Navbar className="navbar-transparent bg-light" expand="md">
+            <Navbar className="navbar-transparent fixed-top" expand="md">
                 <Container>
                     <Link className='navbar-brand' to='/'>Navbar</Link>
                     <NavbarToggler onClick={toggle} />
