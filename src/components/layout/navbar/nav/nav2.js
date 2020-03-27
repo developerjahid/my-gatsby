@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react"
 import { Link } from "gatsby"
+import window from "global"
 import { Nav, Navbar, Collapse, NavbarToggler, Container } from "reactstrap"
 import Navitem from "./navitem"
 
@@ -10,20 +11,15 @@ const Nav2 = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     //Nacbar Color on Scroll
-    if (typeof window !== 'undefined') {
-        window.onscroll = () => {
-            const scrollNav = document.querySelector("nav")
-            const scrollMe = window.scrollY
-            if( scrollMe >= 100 ) {
-                scrollNav.classList.add("scroll")
-            } else {
-                scrollNav.classList.remove("scroll")
-            } 
-        }
-    }else {
-        console.log("window is not avilable")
+    window.onscroll = () => {
+        const scrollNav = document.querySelector("nav")
+        const scrollMe = window.scrollY
+        if( scrollMe >= 100 ) {
+            scrollNav.classList.add("scroll")
+        } else {
+            scrollNav.classList.remove("scroll")
+        } 
     }
-    
 
     return(
         <Fragment>
