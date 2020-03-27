@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react"
 import { Link } from "gatsby"
+import window from "global"
 import { Nav, Navbar, Collapse, NavbarToggler, Container } from "reactstrap"
 import Navitem from "./navitem"
 
