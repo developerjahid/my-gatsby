@@ -10,15 +10,20 @@ const Nav2 = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     //Nacbar Color on Scroll
-    window.onscroll = () => {
-        const scrollNav = document.querySelector("nav")
-        const scrollMe = window.scrollY
-        if( scrollMe >= 100 ) {
-            scrollNav.classList.add("scroll")
-        } else {
-            scrollNav.classList.remove("scroll")
-        } 
+    if (typeof window !== 'undefined') {
+        window.onscroll = () => {
+            const scrollNav = document.querySelector("nav")
+            const scrollMe = window.scrollY
+            if( scrollMe >= 100 ) {
+                scrollNav.classList.add("scroll")
+            } else {
+                scrollNav.classList.remove("scroll")
+            } 
+        }
+    }else {
+        console.log("window is not avilable")
     }
+    
 
     return(
         <Fragment>
